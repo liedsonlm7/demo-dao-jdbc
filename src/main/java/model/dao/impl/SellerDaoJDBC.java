@@ -102,7 +102,6 @@ public class SellerDaoJDBC implements SellerDao {
         }
         finally {
             DB.closeStatement(st);
-            DB.closeConnection();
         }
     }
 
@@ -132,6 +131,7 @@ public class SellerDaoJDBC implements SellerDao {
         }
         finally {
             DB.closeStatement(st);
+            DB.closeResultSet(rs);
         }
     }
 
